@@ -29,29 +29,28 @@
     }
 
     /* ─── HEADER ─── */
-    header {
-      width: 100%;
-      
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    .logo-balk {
-      width: 100%;
-      min-height: 160px;
-      background-color: var(--bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
- .logo-balk img {
-  height: 300px;
+header {
   width: 100%;
-  max-width: 2000px;
-  object-fit: contain;
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
+
+.logo-balk {
+  width: 100%;
+  background-color: var(--bg);
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+}
+
+.logo-balk img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
     }
 
     .logo-placeholder {
@@ -470,6 +469,7 @@
 
 </body>
 </html>
+
 
 
 
