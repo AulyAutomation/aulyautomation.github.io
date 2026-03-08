@@ -6,29 +6,106 @@
   <title>AuLy – Contact</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
   <style>
-    /* zelfde stijl als je index.html */
-  </style>
-</head>
-<body>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <header>
-    <!-- zelfde header als index.html -->
-  </header>
+    :root {
+      --bg: #232323;
+      --black: #000000;
+      --green: #00d09e;
+      --white: #ffffff;
+      --card: #5f5f61;
+      --card-featured: #99a8a5;
+      --text-muted: #6b6b6b;
+    }
 
-  <section style="padding: 80px 20px; text-align: center;">
-    <h2>Contact</h2>
-    <!-- Google Form embed -->
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdi5MVtbezCQqXqUniRk29dVWORbH2wIA48rsVlroSBx6RJMA/viewform?usp=dialog" 
-      width="640" 
-      height="800" 
-      frameborder="0">
-    </iframe>
-  </section>
+    html { scroll-behavior: smooth; }
 
-  <footer>
-    <p>© 2025 AuLy · info@auly.ink</p>
-  </footer>
+    body {
+      background-color: var(--bg);
+      font-family: 'Cormorant SC', serif;
+      color: var(--white);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-</body>
-</html>
+    header {
+      width: 100%;
+      background-color: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .logo-balk {
+      width: 100%;
+      background-color: var(--bg);
+      padding: 0;
+      margin: 0;
+      line-height: 0;
+    }
+
+    .logo-balk img {
+      width: 100%;
+      height: 100px;
+      object-fit: fill;
+      display: block;
+    }
+
+    nav {
+      width: 100%;
+      height: 50px;
+      background-color: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 60px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-family: 'Cormorant SC', serif;
+      font-size: 15px;
+      letter-spacing: 2.5px;
+      font-weight: 400;
+      margin-left: 50px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--green);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover { color: var(--green); }
+    nav a:hover::after { width: 100%; }
+
+    .contact-sectie {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .contact-sectie iframe {
+      width: 100%;
+      max-width: 700px;
+      height: 900px;
+      border: 1px solid var(--green);
+      border-radius: 12px;
+    }
+
+    footer {
+      background: var(--bg);
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    footer p {
+      font-fam
