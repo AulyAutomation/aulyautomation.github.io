@@ -7,7 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --bg: #232323;
       --black: #000000;
@@ -17,9 +16,7 @@
       --card-featured: #99a8a5;
       --text-muted: #6b6b6b;
     }
-
     html { scroll-behavior: smooth; }
-
     body {
       background-color: var(--bg);
       font-family: 'Cormorant SC', serif;
@@ -27,7 +24,6 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
-
     header {
       width: 100%;
       background-color: var(--bg);
@@ -35,7 +31,6 @@
       flex-direction: column;
       align-items: stretch;
     }
-
     .logo-balk {
       width: 100%;
       background-color: var(--bg);
@@ -43,14 +38,12 @@
       margin: 0;
       line-height: 0;
     }
-
     .logo-balk img {
       width: 100%;
       height: 100px;
       object-fit: fill;
       display: block;
     }
-
     nav {
       width: 100%;
       height: 50px;
@@ -60,7 +53,6 @@
       justify-content: flex-end;
       padding: 0 60px;
     }
-
     nav a {
       color: var(--white);
       text-decoration: none;
@@ -72,7 +64,6 @@
       position: relative;
       transition: color 0.3s ease;
     }
-
     nav a::after {
       content: '';
       position: absolute;
@@ -83,24 +74,42 @@
       background: var(--green);
       transition: width 0.3s ease;
     }
-
     nav a:hover { color: var(--green); }
     nav a:hover::after { width: 100%; }
-
     .contact-sectie {
-      padding: 80px 20px;
+      padding: 120px 20px;
       text-align: center;
     }
-
-    .contact-sectie iframe {
-      width: 100%;
-      max-width: 700px;
-      height: 900px;
-      border: 1px solid var(--green);
-      border-radius: 12px;
+    .contact-titel {
+      font-family: 'Cormorant SC', serif;
+      font-size: clamp(28px, 4vw, 48px);
+      color: var(--white);
+      letter-spacing: 3px;
+      margin-bottom: 60px;
     }
-
-   footer {
+    .contact-knoppen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    .contact-knop {
+      display: inline-block;
+      padding: 16px 60px;
+      border: 1px solid var(--green);
+      color: var(--green);
+      font-family: 'Cormorant SC', serif;
+      font-size: 18px;
+      letter-spacing: 3px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .contact-knop:hover {
+      background: var(--green);
+      color: var(--black);
+    }
+    footer {
       background: var(--bg);
       text-align: center;
       padding: 30px 20px;
@@ -115,7 +124,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <div class="logo-balk">
       <img src="Auly base logo.png" alt="AuLy logo" />
@@ -129,15 +137,15 @@
   </header>
 
   <section class="contact-sectie">
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdi5MVtbezCQqXqUniRk29dVWORbH2wIA48rsVlroSBx6RJMA/viewform?embedded=true" 
-      frameborder="0">
-    </iframe>
+    <h2 class="contact-titel">Get In Touch</h2>
+    <div class="contact-knoppen">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdi5MVtbezCQqXqUniRk29dVWORbH2wIA48rsVlroSBx6RJMA/viewform" target="_blank" class="contact-knop">Contact Form</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdi5MVtbezCQqXqUniRk29dVWORbH2wIA48rsVlroSBx6RJMA/viewform" target="_blank" class="contact-knop">Request Appointment</a>
+    </div>
   </section>
 
   <footer>
     <p>© 2025 AuLy · info@auly.ink</p>
   </footer>
-
 </body>
 </html>
