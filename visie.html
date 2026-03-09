@@ -41,7 +41,7 @@
     .logo-balk img {
       width: 100%;
       height: 100px;
-      object-fit: fill;
+      object-fit: contain;
       display: block;
     }
     nav {
@@ -263,6 +263,11 @@
     padding: 16px 30px;
     width: 100%;
     text-align: center;
+  }
+}
+    @media (max-width: 768px) {
+  .logo-balk img {
+    height: 80px;
   }
 }
   </style>
