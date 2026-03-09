@@ -28,44 +28,27 @@
       overflow-x: hidden;
     }
 
-    /* ─── HEADER ─── */
-header {
-  width: 100%;
-  max-height:200xp
-  background-color: var(--bg);
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.logo-balk {
-  width: 100%;
-  background-color: var(--bg);
-  padding: 0;
-  margin: 0;
-  line-height: 0;
-}
-
-.logo-balk img {
-  width: 100%;
-  height: 100px;
-  object-fit: fill;
-  display: block;
-}
+    header {
+      width: 100%;
+      background-color: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
     }
 
-    .logo-placeholder {
-      height: 200px;
-      width: 2000px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1.5px dashed var(--green);
-      border-radius: 8px;
-      color: var(--green);
-      font-size: 13px;
-      letter-spacing: 2px;
-      opacity: 0.7;
+    .logo-balk {
+      width: 100%;
+      background-color: var(--bg);
+      padding: 0;
+      margin: 0;
+      line-height: 0;
+    }
+
+    .logo-balk img {
+      width: 100%;
+      height: 100px;
+      object-fit: fill;
+      display: block;
     }
 
     nav {
@@ -73,9 +56,9 @@ header {
       height: 50px;
       background-color: var(--black);
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: flex-end;
-      padding: 0 60px 20px 60px;
+      padding: 0 60px;
     }
 
     nav a {
@@ -104,7 +87,6 @@ header {
     nav a:hover { color: var(--green); }
     nav a:hover::after { width: 100%; }
 
-    /* ─── HERO TEXT ─── */
     .hero {
       text-align: center;
       padding: 80px 20px 60px;
@@ -123,7 +105,6 @@ header {
       animation: fadeUp 1s ease 0.3s forwards;
     }
 
-    /* ─── SECTIES ALGEMEEN ─── */
     .sectie-titel {
       font-family: 'Cormorant SC', serif;
       font-size: 13px;
@@ -135,58 +116,51 @@ header {
       animation: fadeUp 1s ease 0.5s forwards;
     }
 
-    /* ─── WHY AULY SECTIE ─── */
     .why-sectie {
       padding: 20px 60px 60px;
       text-align: center;
     }
 
- .why-sectie {
-  padding: 20px 60px 60px;
-  text-align: center;
-}
+    .usp-groot {
+      background: var(--card);
+      border: 1px solid var(--green);
+      border-radius: 12px;
+      padding: 40px 50px;
+      max-width: 700px;
+      min-height: 300px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.6s forwards;
+    }
 
-.usp-groot {
-  background: var(--card);
-  border: 1px solid var(--green);
-  border-radius: 12px;
-  padding: 40px 50px;
-  max-width: 700px;
-  min-height: 300px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  opacity: 0;
-  animation: fadeUp 0.8s ease 0.6s forwards;
-}
+    .usp-groot-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 14px;
+      width: 400px;
+      padding: 30px 0;
+    }
 
-.usp-groot-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 14px;
-  width: 400px;
-  padding: 30px 0;
-}
+    .usp-groot-item .vinkje {
+      color: var(--green);
+      font-size: 20px;
+      flex-shrink: 0;
+    }
 
-.usp-groot-item .vinkje {
-  color: var(--green);
-  font-size: 20px;
-  flex-shrink: 0;
-}
+    .usp-groot-item p {
+      font-family: 'Cormorant', serif;
+      font-size: 22px;
+      color: var(--white);
+      line-height: 1.5;
+      text-align: center;
+    }
 
-.usp-groot-item p {
-  font-family: 'Cormorant', serif;
-  font-size: 22px;
-  color: var(--white);
-  line-height: 1.5;
-  text-align: center;
-}
-
-    /* ─── PAKKETTEN SECTIE ─── */
     .pakketten-sectie {
       padding: 20px 60px 80px;
       text-align: center;
@@ -314,7 +288,6 @@ header {
       color: var(--black);
     }
 
-    /* ─── CTA ─── */
     .cta {
       background: var(--black);
       text-align: center;
@@ -347,7 +320,6 @@ header {
       color: var(--black);
     }
 
-    /* ─── FOOTER ─── */
     footer {
       background: var(--bg);
       text-align: center;
@@ -362,7 +334,6 @@ header {
       letter-spacing: 1.5px;
     }
 
-    /* ─── ANIMATIES ─── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -371,17 +342,9 @@ header {
 </head>
 <body>
 
-  <!-- ═══ HEADER ═══ -->
   <header>
     <div class="logo-balk">
-      <!--
-        LOGO INSTELLEN:
-        1. Verwijder de <div class="logo-placeholder"> regel
-        2. Haal de commentaar weg van de <img> regel
-        3. Vervang JOUW_LOGO_LINK_HIER met jouw logo URL
-      -->
-        <!-- <img src="JOUW_LOGO_LINK_HIER" alt="AuLy logo" /> -->
-   <img class= <img src="Auly base logo.png" alt="AuLy logo" />
+      <img src="Auly base logo.png" alt="AuLy logo" />
     </div>
     <nav>
       <a href="services.html">Services</a>
@@ -390,12 +353,10 @@ header {
     </nav>
   </header>
 
-  <!-- ═══ HERO ═══ -->
   <section class="hero">
     <p>We connect existing tools to each other so that your company automatically follows up with customers and schedules appointments.</p>
   </section>
 
-  <!-- ═══ WHY AULY ═══ -->
   <section class="why-sectie">
     <h2 class="sectie-titel">Why Auly?</h2>
     <div class="usp-groot">
@@ -414,127 +375,64 @@ header {
     </div>
   </section>
 
-  <!-- ═══ OUR PACKAGES ═══ -->
   <section class="pakketten-sectie">
-    <h2 class="sectie-titel">Our Packages</h2>
+    <h2 class="sectie-titel">Our Services</h2>
     <div class="producten-grid">
 
-     <!-- PAKKET 1: STARTER -->
-<div class="pakket">
-  <h3>Starter</h3>
-  <p class="omschrijving">Your first step towards automation. A client fills in the form — a professional reply lands in their inbox automatically.</p>
-  <div class="pakket-divider"></div>
-  <ul class="usp-lijst">
-    <li><span class="vinkje">✔</span> Custom contact form</li>
-    <li><span class="vinkje">✔</span> Automatic reply email</li>
-    <li><span class="vinkje">✔</span> Branded email template</li>
-    <li><span class="vinkje">✔</span> One-time setup, no monthly costs</li>
-    <li><span class="vinkje">✔</span> 30-day support</li>
-  </ul>
-  <a href="services.html" class="pakket-knop">View Details</a>
-</div>
+      <!-- LEAD RESPONSE SYSTEM -->
+      <div class="pakket">
+        <h3>Lead Response System</h3>
+        <p class="omschrijving">Ensure every new enquiry receives an immediate, professional reply.</p>
+        <div class="pakket-divider"></div>
+        <ul class="usp-lijst">
+          <li><span class="vinkje">✔</span> Custom contact form</li>
+          <li><span class="vinkje">✔</span> Automatic branded email response</li>
+          <li><span class="vinkje">✔</span> Enquiry data organised in a secure database</li>
+          <li><span class="vinkje">✔</span> One-time setup, no monthly automation fees</li>
+        </ul>
+        <a href="services.html" class="pakket-knop">View Details</a>
+      </div>
 
-<!-- PAKKET 2: BOOKING -->
-<div class="pakket">
-  <h3>Booking</h3>
-  <p class="omschrijving">Let your clients come to you. A smart booking system that lets clients schedule their own appointment — directly in your calendar.</p>
-  <div class="pakket-divider"></div>
-  <ul class="usp-lijst">
-    <li><span class="vinkje">✔</span> Calendly booking system</li>
-    <li><span class="vinkje">✔</span> Synced with your calendar</li>
-    <li><span class="vinkje">✔</span> No back-and-forth scheduling</li>
-    <li><span class="vinkje">✔</span> One-time setup, no monthly costs</li>
-    <li><span class="vinkje">✔</span> 30-day support</li>
-  </ul>
-  <a href="services.html" class="pakket-knop">View Details</a>
-</div>
+      <!-- BOOKING SYSTEM -->
+      <div class="pakket">
+        <h3>Booking System</h3>
+        <p class="omschrijving">Let clients schedule appointments directly in your calendar.</p>
+        <div class="pakket-divider"></div>
+        <ul class="usp-lijst">
+          <li><span class="vinkje">✔</span> Calendar integration</li>
+          <li><span class="vinkje">✔</span> Client self-booking system</li>
+          <li><span class="vinkje">✔</span> Automatic confirmation emails</li>
+          <li><span class="vinkje">✔</span> Reduced back-and-forth scheduling</li>
+        </ul>
+        <a href="services.html" class="pakket-knop">View Details</a>
+      </div>
 
-<!-- PAKKET 3: COMPLETE -->
-<div class="pakket">
-  <div class="pakket">
-<h3><span style="color: #00d09e;">★</span> Complete</h3>
-  <p class="omschrijving">The full experience. Form, automatic reply, and booking — all connected. Your client reaches out, you show up prepared.</p>
-  <div class="pakket-divider"></div>
-  <ul class="usp-lijst">
-    <li><span class="vinkje">✔</span> Custom contact form</li>
-    <li><span class="vinkje">✔</span> Automatic reply email</li>
-    <li><span class="vinkje">✔</span> Calendly booking system</li>
-    <li><span class="vinkje">✔</span> Fully connected workflow</li>
-    <li><span class="vinkje">✔</span> One-time setup, no monthly costs</li>
-    <li><span class="vinkje">✔</span> 60-day support</li>
-  </ul>
-  <a href="services.html" class="pakket-knop">View Details</a>
-</div>
-      
+      <!-- COMPLETE CLIENT CAPTURE SYSTEM -->
+      <div class="pakket">
+        <h3><span style="color: #00d09e;">★</span> Complete Client Capture System</h3>
+        <p class="omschrijving">A fully automated enquiry and booking workflow.</p>
+        <div class="pakket-divider"></div>
+        <ul class="usp-lijst">
+          <li><span class="vinkje">✔</span> Custom enquiry form</li>
+          <li><span class="vinkje">✔</span> Automatic response email</li>
+          <li><span class="vinkje">✔</span> Appointment booking integration</li>
+          <li><span class="vinkje">✔</span> Organised client database</li>
+          <li><span class="vinkje">✔</span> Fully configured workflow</li>
+        </ul>
+        <a href="services.html" class="pakket-knop">View Details</a>
+      </div>
+
     </div>
   </section>
 
-  <!-- ═══ CTA ═══ -->
   <section class="cta">
     <h2>Ready to start?</h2>
     <a href="contact.html">Get in touch</a>
   </section>
 
-  <!-- ═══ FOOTER ═══ -->
   <footer>
     <p>© 2025 AuLy · info@auly.ink</p>
   </footer>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
