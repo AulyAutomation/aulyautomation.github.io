@@ -1,375 +1,262 @@
-<!-- ============================================================
-     AuLy — "See How It Works" sectie
-     Plak dit in je bestaande HTML pagina op de gewenste plek.
-     Vervang VIDEO_URL_HIER door jouw uiteindelijke video URL/embed.
-     ============================================================ -->
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;600&family=Cormorant:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AuLy – Automation Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+  <title>AuLy — In Action</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;600&family=Cormorant:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-
-    html { scroll-behavior: smooth; }
-
     body {
-      background-color: var(--bg);
-      font-family: 'Cormorant SC', serif;
-      color: var(--white);
-      min-height: 100vh;
-      overflow-x: hidden;
+      background: #232323;
+      color: #ffffff;
+      font-family: 'Cormorant', serif;
     }
 
-    header {
-      width: 100%;
-      background-color: var(--bg);
+    /* ── Logo header ── */
+    .site-logo-bar {
       display: flex;
-      flex-direction: column;
-      align-items: stretch;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 18px 40px;
+      background: #232323;
     }
 
-    .logo-balk {
-      width: 100%;
-      background-color: var(--bg);
-      padding: 0;
-      margin: 0;
-      line-height: 0;
-    }
-
-    .logo-balk img {
-      width: 100%;
+    .site-logo-bar img {
       height: 100px;
       object-fit: contain;
-      display: block;
     }
 
+    @media (max-width: 768px) {
+      .site-logo-bar img { height: 80px; }
+      .site-logo-bar { padding: 14px 20px; }
+    }
+
+    /* ── Navigatiebalk ── */
     nav {
-      width: 100%;
+      background: #000000;
       height: 50px;
-      background-color: var(--black);
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      padding: 0 60px;
+      padding: 0 40px;
+      gap: 48px;
     }
 
     nav a {
-      color: var(--white);
-      text-decoration: none;
       font-family: 'Cormorant SC', serif;
-      font-size: 15px;
-      letter-spacing: 2.5px;
-      font-weight: 400;
-      margin-left: 50px;
-      position: relative;
-      transition: color 0.3s ease;
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: color 0.2s;
     }
 
-    nav a::after {
+    nav a:hover { color: #00d09e; }
+
+    @media (max-width: 768px) {
+      nav { justify-content: center; gap: 28px; padding: 0 20px; }
+      nav a { font-size: 12px; }
+    }
+
+    /* ── See How It Works sectie ── */
+    .how-it-works {
+      padding: 100px 24px 120px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .how-it-works::before {
       content: '';
       position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--green);
-      transition: width 0.3s ease;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 20%, rgba(0,208,158,0.04) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 10% 80%, rgba(0,208,158,0.03) 0%, transparent 70%);
+      pointer-events: none;
     }
 
-    nav a:hover { color: var(--green); }
-    nav a:hover::after { width: 100%; }
-<header>
-    <div class="logo-balk">
-      <img src="Auly base logo.png" alt="AuLy logo" />
-    </div>
-    <nav>
-      <a href="services.html">Services</a>
-      <a href="visie.html">Vision</a>
-      <a href="contact.html">Contact</a>
-      <a href="inaction.html">In Action</a>
-    </nav>
-  </header>
+    .hiw-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      position: relative;
+    }
 
-<section class="how-it-works" id="how-it-works">
-  <div class="hiw-inner">
+    /* Header */
+    .hiw-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
 
-    <!-- Header -->
-    <div class="hiw-header">
-      <span class="hiw-label">In actie</span>
-      <h2 class="hiw-title">See How It Works</h2>
-      <p class="hiw-sub">
-        Watch how AuLy automates your client flow — from first contact to confirmed booking — without any monthly subscriptions or complicated platforms.
-      </p>
-    </div>
+    .hiw-label {
+      display: inline-block;
+      font-family: 'Cormorant SC', serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      color: #00d09e;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
 
-    <!-- Video container -->
-    <div class="hiw-video-wrap">
-      <div class="hiw-video-frame">
+    .hiw-title {
+      font-family: 'Cormorant SC', serif;
+      font-size: clamp(36px, 6vw, 58px);
+      font-weight: 300;
+      color: #ffffff;
+      margin: 0 0 20px;
+      letter-spacing: 0.05em;
+      line-height: 1.1;
+    }
 
-        <!-- ══════════════════════════════════════════════
-             OPTIE 1: Lokaal video bestand
-             Uncomment en vul je bestandsnaam in:
-        <video controls poster="" preload="metadata">
-          <source src="jouw-video.mp4" type="video/mp4">
-        </video>
-        ══════════════════════════════════════════════ -->
+    .hiw-sub {
+      font-family: 'Cormorant', serif;
+      font-size: clamp(16px, 2vw, 19px);
+      font-style: italic;
+      color: rgba(255,255,255,0.55);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
 
-        <!-- ══════════════════════════════════════════════
-             OPTIE 2: YouTube embed
-             Vervang VIDEO_ID door jouw YouTube video ID:
-        <iframe
-          src="https://www.youtube.com/embed/VIDEO_ID?rel=0&color=white"
-          title="AuLy — See How It Works"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-        ══════════════════════════════════════════════ -->
+    /* Video */
+    .hiw-video-wrap {
+      position: relative;
+      margin-bottom: 72px;
+    }
 
-        <!-- ══════════════════════════════════════════════
-             OPTIE 3: Loom embed
-             Vervang LOOM_VIDEO_ID door jouw Loom ID:
-        <iframe
-          src="https://www.loom.com/embed/LOOM_VIDEO_ID"
-          title="AuLy — See How It Works"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
-        ══════════════════════════════════════════════ -->
+    .hiw-video-frame {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background: #1a1a1a;
+      border: 1px solid rgba(0,208,158,0.2);
+      overflow: hidden;
+      box-shadow:
+        0 0 0 1px rgba(0,208,158,0.08),
+        0 32px 80px rgba(0,0,0,0.6),
+        0 0 60px rgba(0,208,158,0.05);
+    }
 
-        <!-- TIJDELIJK PLACEHOLDER — verwijder dit blok zodra je je video hebt -->
-        <div class="hiw-placeholder">
-          <div class="hiw-play-icon">
-            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="30" cy="30" r="29" stroke="#00d09e" stroke-width="1.5"/>
-              <polygon points="24,18 46,30 24,42" fill="#00d09e"/>
-            </svg>
-          </div>
-          <p class="hiw-placeholder-text">Video coming soon</p>
-        </div>
-        <!-- EINDE PLACEHOLDER -->
+    .hiw-video-frame video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
 
-      </div>
+    .hiw-deco-line {
+      position: absolute;
+      left: -32px;
+      top: 20px;
+      bottom: 20px;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, #00d09e 40%, #00d09e 60%, transparent);
+      opacity: 0.3;
+    }
 
-      <!-- Decoratieve lijn links -->
-      <div class="hiw-deco-line"></div>
-    </div>
+    /* Drie stappen */
+    .hiw-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
 
-    <!-- Drie punten onder de video -->
-    <div class="hiw-steps">
-      <div class="hiw-step">
-        <span class="hiw-step-num">01</span>
-        <h3 class="hiw-step-title">Lead responds automatically</h3>
-        <p class="hiw-step-text">The moment someone fills in your form, a branded email goes out — no manual work needed.</p>
-      </div>
-      <div class="hiw-step">
-        <span class="hiw-step-num">02</span>
-        <h3 class="hiw-step-title">Booking link included</h3>
-        <p class="hiw-step-text">Clients book directly into your calendar via Calendly — instantly, 24/7.</p>
-      </div>
-      <div class="hiw-step">
-        <span class="hiw-step-num">03</span>
-        <h3 class="hiw-step-title">You stay in control</h3>
-        <p class="hiw-step-text">All data lands in your Google Sheet. One-time setup. No subscriptions. Ever.</p>
-      </div>
-    </div>
+    .hiw-step {
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
 
+    .hiw-step-num {
+      display: block;
+      font-family: 'Cormorant SC', serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      color: #00d09e;
+      margin-bottom: 12px;
+    }
+
+    .hiw-step-title {
+      font-family: 'Cormorant SC', serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #ffffff;
+      margin: 0 0 10px;
+      letter-spacing: 0.03em;
+    }
+
+    .hiw-step-text {
+      font-size: 15px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.65;
+    }
+
+    @media (max-width: 768px) {
+      .how-it-works { padding: 72px 20px 88px; }
+      .hiw-deco-line { display: none; }
+      .hiw-steps { grid-template-columns: 1fr; gap: 32px; }
+      .hiw-header { margin-bottom: 44px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <div class="site-logo-bar">
+    <img src="Auly base logo.png" alt="AuLy logo">
   </div>
-</section>
 
-<style>
-/* ── See How It Works ────────────────────────────────────────── */
-.how-it-works {
-  background: #232323;
-  padding: 100px 24px 120px;
-  position: relative;
-  overflow: hidden;
-}
+  <!-- Navigatie -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="visie.html">Vision</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-/* Subtiele achtergrond textuur */
-.how-it-works::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(0,208,158,0.04) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 10% 80%, rgba(0,208,158,0.03) 0%, transparent 70%);
-  pointer-events: none;
-}
+  <!-- See How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="hiw-inner">
 
-.hiw-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  position: relative;
-}
+      <div class="hiw-header">
+        <span class="hiw-label">In actie</span>
+        <h2 class="hiw-title">See How It Works</h2>
+        <p class="hiw-sub">
+          Watch how AuLy automates your client flow — from first contact to confirmed booking — without any monthly subscriptions or complicated platforms.
+        </p>
+      </div>
 
-/* Header */
-.hiw-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
+      <div class="hiw-video-wrap">
+        <div class="hiw-video-frame">
+          <video controls preload="metadata">
+            <source src="Complete Capture Demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="hiw-deco-line"></div>
+      </div>
 
-.hiw-label {
-  display: inline-block;
-  font-family: 'Cormorant SC', serif;
-  font-size: 11px;
-  letter-spacing: 0.25em;
-  color: #00d09e;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
+      <div class="hiw-steps">
+        <div class="hiw-step">
+          <span class="hiw-step-num">01</span>
+          <h3 class="hiw-step-title">Lead responds automatically</h3>
+          <p class="hiw-step-text">The moment someone fills in your form, a branded email goes out — no manual work needed.</p>
+        </div>
+        <div class="hiw-step">
+          <span class="hiw-step-num">02</span>
+          <h3 class="hiw-step-title">Booking link included</h3>
+          <p class="hiw-step-text">Clients book directly into your calendar via Calendly — instantly, 24/7.</p>
+        </div>
+        <div class="hiw-step">
+          <span class="hiw-step-num">03</span>
+          <h3 class="hiw-step-title">You stay in control</h3>
+          <p class="hiw-step-text">All data lands in your Google Sheet. One-time setup. No subscriptions. Ever.</p>
+        </div>
+      </div>
 
-.hiw-title {
-  font-family: 'Cormorant SC', serif;
-  font-size: clamp(36px, 6vw, 58px);
-  font-weight: 300;
-  color: #ffffff;
-  margin: 0 0 20px;
-  letter-spacing: 0.05em;
-  line-height: 1.1;
-}
+    </div>
+  </section>
 
-.hiw-sub {
-  font-family: 'Cormorant', serif;
-  font-size: clamp(16px, 2vw, 19px);
-  font-style: italic;
-  color: rgba(255,255,255,0.55);
-  max-width: 560px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* Video wrapper */
-.hiw-video-wrap {
-  position: relative;
-  margin-bottom: 72px;
-}
-
-.hiw-video-frame {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 */
-  background: #1a1a1a;
-  border: 1px solid rgba(0,208,158,0.2);
-  overflow: hidden;
-  box-shadow:
-    0 0 0 1px rgba(0,208,158,0.08),
-    0 32px 80px rgba(0,0,0,0.6),
-    0 0 60px rgba(0,208,158,0.05);
-}
-
-.hiw-video-frame video,
-.hiw-video-frame iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Decoratieve lijn */
-.hiw-deco-line {
-  position: absolute;
-  left: -32px;
-  top: 20px;
-  bottom: 20px;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent, #00d09e 40%, #00d09e 60%, transparent);
-  opacity: 0.3;
-}
-
-/* Placeholder (tijdelijk) */
-.hiw-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-.hiw-play-icon svg {
-  width: 72px;
-  height: 72px;
-  opacity: 0.7;
-  transition: opacity 0.3s, transform 0.3s;
-}
-
-.hiw-placeholder:hover .hiw-play-icon svg {
-  opacity: 1;
-  transform: scale(1.08);
-}
-
-.hiw-placeholder-text {
-  font-family: 'Cormorant SC', serif;
-  font-size: 13px;
-  letter-spacing: 0.2em;
-  color: rgba(255,255,255,0.3);
-  text-transform: uppercase;
-  margin: 0;
-}
-
-/* Drie stappen */
-.hiw-steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-.hiw-step {
-  position: relative;
-  padding-top: 24px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.hiw-step-num {
-  display: block;
-  font-family: 'Cormorant SC', serif;
-  font-size: 11px;
-  letter-spacing: 0.25em;
-  color: #00d09e;
-  margin-bottom: 12px;
-}
-
-.hiw-step-title {
-  font-family: 'Cormorant SC', serif;
-  font-size: 18px;
-  font-weight: 400;
-  color: #ffffff;
-  margin: 0 0 10px;
-  letter-spacing: 0.03em;
-}
-
-.hiw-step-text {
-  font-family: 'Cormorant', serif;
-  font-size: 15px;
-  color: rgba(255,255,255,0.5);
-  line-height: 1.65;
-  margin: 0;
-}
-
-/* ── Mobiel ──────────────────────────────────────────────────── */
-@media (max-width: 768px) {
-  .how-it-works {
-    padding: 72px 20px 88px;
-  }
-
-  .hiw-deco-line {
-    display: none;
-  }
-
-  .hiw-steps {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .hiw-header {
-    margin-bottom: 44px;
-  }
-}
-</style>
+</body>
+</html>
