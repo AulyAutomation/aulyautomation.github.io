@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AuLy – Automation Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -15,14 +15,14 @@
       --white: #ffffff;
       --card: #5f5f61;
       --card-featured: #99a8a5;
-      --text-muted: #6b6b6b;
+      --text-muted: #9b9b9b;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
       background-color: var(--bg);
-      font-family: 'Cormorant SC', serif;
+      font-family: 'DM Sans', sans-serif;
       color: var(--white);
       min-height: 100vh;
       overflow-x: hidden;
@@ -36,20 +36,8 @@
       align-items: stretch;
     }
 
-    .logo-balk {
-      width: 100%;
-      background-color: var(--bg);
-      padding: 0;
-      margin: 0;
-      line-height: 0;
-    }
-
-    .logo-balk img {
-      width: 100%;
-      height: 100px;
-      object-fit: contain;
-      display: block;
-    }
+    .logo-balk { width: 100%; background-color: var(--bg); padding: 0; margin: 0; line-height: 0; }
+    .logo-balk img { width: 100%; height: 100px; object-fit: contain; display: block; }
 
     nav {
       width: 100%;
@@ -64,9 +52,9 @@
     nav a {
       color: var(--white);
       text-decoration: none;
-      font-family: 'Cormorant SC', serif;
-      font-size: 15px;
-      letter-spacing: 2.5px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      letter-spacing: 2px;
       font-weight: 400;
       margin-left: 50px;
       position: relative;
@@ -95,19 +83,19 @@
     }
 
     .hero p {
-      font-family: 'Cormorant', serif;
+      font-family: 'DM Sans', sans-serif;
       font-style: italic;
-      font-size: clamp(22px, 3vw, 36px);
+      font-size: clamp(20px, 2.5vw, 32px);
       color: var(--green);
       font-weight: 300;
-      line-height: 1.5;
+      line-height: 1.6;
       opacity: 0;
       animation: fadeUp 1s ease 0.3s forwards;
     }
 
     .sectie-titel {
-      font-family: 'Cormorant SC', serif;
-      font-size: 13px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
       letter-spacing: 4px;
       color: var(--text-muted);
       text-transform: uppercase;
@@ -116,10 +104,7 @@
       animation: fadeUp 1s ease 0.5s forwards;
     }
 
-    .why-sectie {
-      padding: 20px 60px 60px;
-      text-align: center;
-    }
+    .why-sectie { padding: 20px 60px 60px; text-align: center; }
 
     .usp-groot {
       background: var(--card);
@@ -147,24 +132,17 @@
       padding: 30px 0;
     }
 
-    .usp-groot-item .vinkje {
-      color: var(--green);
-      font-size: 20px;
-      flex-shrink: 0;
-    }
+    .usp-groot-item .vinkje { color: var(--green); font-size: 20px; flex-shrink: 0; }
 
     .usp-groot-item p {
-      font-family: 'Cormorant', serif;
-      font-size: 22px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 20px;
       color: var(--white);
       line-height: 1.5;
       text-align: center;
     }
 
-    .pakketten-sectie {
-      padding: 20px 60px 80px;
-      text-align: center;
-    }
+    .pakketten-sectie { padding: 20px 60px 80px; text-align: center; }
 
     .producten-grid {
       display: flex;
@@ -195,21 +173,15 @@
     .pakket:nth-child(2) { animation: fadeUp 0.8s ease 0.9s forwards; }
     .pakket:nth-child(3) { animation: fadeUp 0.8s ease 1.1s forwards; }
 
-    .pakket:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 50px rgba(0, 208, 158, 0.15);
-    }
-
-    .pakket:last-child {
-      background: var(--card-featured);
-      border-color: var(--white);
-    }
+    .pakket:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0, 208, 158, 0.15); }
+    .pakket:last-child { background: var(--card-featured); border-color: var(--white); }
 
     .pakket h3 {
       color: var(--green);
-      font-family: 'Cormorant SC', serif;
-      font-size: 20px;
-      letter-spacing: 2px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      letter-spacing: 1px;
+      font-weight: 600;
       margin-bottom: 16px;
     }
 
@@ -219,32 +191,21 @@
       color: #1a1a1a;
       font-size: 14px;
       line-height: 1.6;
-      font-family: 'Cormorant', serif;
-      font-weight: bold;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
       margin-bottom: 20px;
     }
 
-    .pakket-divider {
-      width: 100%;
-      height: 1px;
-      background: rgba(255,255,255,0.12);
-      margin: 4px 0 18px 0;
-    }
+    .pakket-divider { width: 100%; height: 1px; background: rgba(255,255,255,0.12); margin: 4px 0 18px 0; }
 
-    .usp-lijst {
-      list-style: none;
-      width: 100%;
-      text-align: left;
-      margin-bottom: 24px;
-      flex-grow: 1;
-    }
+    .usp-lijst { list-style: none; width: 100%; text-align: left; margin-bottom: 24px; flex-grow: 1; }
 
     .usp-lijst li {
       display: flex;
       align-items: flex-start;
       gap: 10px;
-      font-family: 'Cormorant', serif;
-      font-size: 15px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
       color: var(--white);
       padding: 8px 0;
       border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -252,53 +213,97 @@
 
     .usp-lijst li:last-child { border-bottom: none; }
 
-    .vinkje {
-      color: var(--green);
-      font-size: 16px;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
+    .vinkje { color: var(--green); font-size: 16px; flex-shrink: 0; margin-top: 2px; }
 
     .pakket-knop {
       display: inline-block;
       padding: 11px 28px;
       border: 1px solid var(--green);
       color: var(--green);
-      font-family: 'Cormorant SC', serif;
+      font-family: 'DM Sans', sans-serif;
       font-size: 13px;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       text-decoration: none;
       border-radius: 6px;
       margin-top: auto;
       transition: background 0.3s ease, color 0.3s ease;
     }
 
-    .pakket-knop:hover {
-      background: var(--green);
-      color: var(--black);
+    .pakket-knop:hover { background: var(--green); color: var(--black); }
+    .pakket:last-child .pakket-knop { border-color: var(--white); color: var(--white); }
+    .pakket:last-child .pakket-knop:hover { background: var(--white); color: var(--black); }
+
+    /* SESSIE SECTIE */
+    .sessie-sectie { padding: 60px 60px 80px; text-align: center; background: var(--black); }
+
+    .sessie-grid {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 24px;
+      max-width: 700px;
+      margin: 0 auto 40px;
     }
 
-    .pakket:last-child .pakket-knop {
-      border-color: var(--white);
-      color: var(--white);
+    .sessie-card {
+      flex: 1;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .pakket:last-child .pakket-knop:hover {
-      background: var(--white);
-      color: var(--black);
+    .sessie-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0, 208, 158, 0.1); }
+    .sessie-featured { border-color: var(--green); }
+
+    .sessie-prijs { font-family: 'DM Sans', sans-serif; font-size: 36px; color: var(--green); font-weight: 600; }
+
+    .sessie-card h3 { font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 600; color: var(--white); margin-top: 4px; }
+
+    .sessie-duur {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
-    .cta {
-      background: var(--black);
-      text-align: center;
-      padding: 70px 20px;
+    .sessie-omschrijving {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+      margin-top: 8px;
     }
+
+    .sessie-knop {
+      display: inline-block;
+      padding: 14px 44px;
+      border: 1px solid var(--green);
+      color: var(--green);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .sessie-knop:hover { background: var(--green); color: var(--black); }
+
+    .cta { background: var(--bg); text-align: center; padding: 70px 20px; }
 
     .cta h2 {
-      font-family: 'Cormorant SC', serif;
-      font-size: clamp(28px, 4vw, 48px);
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(26px, 4vw, 44px);
       color: var(--white);
-      letter-spacing: 3px;
+      letter-spacing: 2px;
+      font-weight: 500;
       margin-bottom: 30px;
     }
 
@@ -307,89 +312,34 @@
       padding: 16px 50px;
       border: 1px solid var(--green);
       color: var(--green);
-      font-family: 'Cormorant SC', serif;
+      font-family: 'DM Sans', sans-serif;
       font-size: 14px;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       text-decoration: none;
       border-radius: 6px;
       transition: background 0.3s ease, color 0.3s ease;
     }
 
-    .cta a:hover {
-      background: var(--green);
-      color: var(--black);
-    }
+    .cta a:hover { background: var(--green); color: var(--black); }
 
-    footer {
-      background: var(--bg);
-      text-align: center;
-      padding: 30px 20px;
-      border-top: 1px solid rgba(255,255,255,0.07);
-    }
+    footer { background: var(--bg); text-align: center; padding: 30px 20px; border-top: 1px solid rgba(255,255,255,0.07); }
 
-    footer p {
-      font-family: 'Cormorant', serif;
-      font-size: 13px;
-      color: var(--text-muted);
-      letter-spacing: 1.5px;
-    }
+    footer p { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text-muted); letter-spacing: 1.5px; }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
       to   { opacity: 1; transform: translateY(0); }
     }
+
     @media (max-width: 768px) {
-  .producten-grid {
-    flex-direction: column;
-  }
-
-  .why-sectie,
-  .pakketten-sectie,
-  .services-sectie {
-    padding: 20px 20px;
-  }
-
-  .usp-groot-item {
-    width: 100%;
-  }
-
-  .service-card {
-    padding: 30px 24px;
-  }
-
-  nav {
-    padding: 0 20px;
-  }
-
-  nav a {
-    margin-left: 20px;
-    font-size: 12px;
-  }
-
-  .visie-blok,
-  .doelgroep-blok {
-    padding: 30px 24px;
-  }
-
-  .visie-sectie {
-    padding: 60px 20px;
-  }
-
-  .contact-knoppen {
-    padding: 0 20px;
-  }
-
-  .contact-knop {
-    padding: 16px 30px;
-    width: 100%;
-    text-align: center;
-  }
-}
-    @media (max-width: 768px) {
-  .logo-balk img {
-    height: 90px;
-  }
-}
+      .producten-grid { flex-direction: column; }
+      .sessie-grid { flex-direction: column; }
+      .why-sectie, .pakketten-sectie, .sessie-sectie { padding: 20px 20px; }
+      .usp-groot-item { width: 100%; }
+      nav { padding: 0 20px; }
+      nav a { margin-left: 20px; font-size: 12px; }
+      .logo-balk img { height: 90px; }
+    }
   </style>
 </head>
 <body>
@@ -411,7 +361,7 @@
   </section>
 
   <section class="why-sectie">
-    <h2 class="sectie-titel">Why Auly</h2> 
+    <h2 class="sectie-titel">Why Auly</h2>
     <div class="usp-groot">
       <div class="usp-groot-item">
         <span class="vinkje">✔</span>
@@ -432,7 +382,6 @@
     <h2 class="sectie-titel">Our Services</h2>
     <div class="producten-grid">
 
-      <!-- LEAD RESPONSE SYSTEM -->
       <div class="pakket">
         <h3>Lead Response System</h3>
         <p class="omschrijving">Ensure every new enquiry receives an immediate, professional reply.</p>
@@ -446,7 +395,6 @@
         <a href="services.html" class="pakket-knop">View Details</a>
       </div>
 
-      <!-- BOOKING SYSTEM -->
       <div class="pakket">
         <h3>Booking System</h3>
         <p class="omschrijving">Let clients schedule appointments directly in your calendar.</p>
@@ -460,7 +408,6 @@
         <a href="services.html" class="pakket-knop">View Details</a>
       </div>
 
-      <!-- COMPLETE CLIENT CAPTURE SYSTEM -->
       <div class="pakket">
         <h3><span style="color: #00d09e;">★</span> Complete Client Capture System</h3>
         <p class="omschrijving">A fully automated enquiry and booking workflow.</p>
@@ -478,20 +425,27 @@
     </div>
   </section>
 
-  <section class="cta">
-    <h2>Ready to start?</h2>
-    <a href="contact.html">Get in touch</a>
+  <section class="sessie-sectie">
+    <h2 class="sectie-titel">Ready To Start?</h2>
+    <div class="sessie-grid">
+
+      <div class="sessie-card">
+        <p class="sessie-prijs">€25,-</p>
+        <h3>Intake Call</h3>
+        <p class="sessie-duur">30 min</p>
+        <p class="sessie-omschrijving">Not sure which service fits your business? We'll talk it through together and figure out what you actually need.</p>
+      </div>
+
+      <div class="sessie-card sessie-featured">
+        <p class="sessie-prijs">€45,-</p>
+        <h3>Online Session</h3>
+        <p class="sessie-duur">60 min</p>
+        <p class="sessie-omschrijving">You know what you want and you're ready to move. This fee is deducted from your package price if you purchase within 30 days.</p>
+      </div>
+
+    </div>
+    <a href="contact.html" class="sessie-knop">Book a Session</a>
   </section>
 
   <footer>
-    <p>© 2025 AuLy · info@auly.ink</p>
-  </footer>
-
-</body>
-</html>
-
-
-
-
-
-
+    <p>© 2025 AuLy · <a href="/cdn-cgi/l/email-protection" class="__
