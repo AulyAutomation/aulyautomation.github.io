@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AuLy – Contact</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -19,7 +19,7 @@
     html { scroll-behavior: smooth; }
     body {
       background-color: var(--bg);
-       font-family: 'DM Sans', sans-serif;
+      font-family: 'DM Sans', sans-serif;
       color: var(--white);
       min-height: 100vh;
       overflow-x: hidden;
@@ -31,19 +31,8 @@
       flex-direction: column;
       align-items: stretch;
     }
-    .logo-balk {
-      width: 100%;
-      background-color: var(--bg);
-      padding: 0;
-      margin: 0;
-      line-height: 0;
-    }
-    .logo-balk img {
-      width: 100%;
-      height: 100px;
-      object-fit: contain;
-      display: block;
-    }
+    .logo-balk { width: 100%; background-color: var(--bg); padding: 0; margin: 0; line-height: 0; }
+    .logo-balk img { width: 100%; height: 100px; object-fit: contain; display: block; }
     nav {
       width: 100%;
       height: 50px;
@@ -56,7 +45,7 @@
     nav a {
       color: var(--white);
       text-decoration: none;
-       font-family: 'DM Sans', sans-serif;
+      font-family: 'DM Sans', sans-serif;
       font-size: 15px;
       letter-spacing: 2.5px;
       font-weight: 400;
@@ -81,7 +70,7 @@
       text-align: center;
     }
     .contact-titel {
-    font-family: 'DM Sans', sans-serif;
+      font-family: 'DM Sans', sans-serif;
       font-size: clamp(28px, 4vw, 48px);
       color: var(--white);
       letter-spacing: 3px;
@@ -116,62 +105,18 @@
       border-top: 1px solid rgba(255,255,255,0.07);
     }
     footer p {
-       font-family: 'DM Sans', sans-serif;
+      font-family: 'DM Sans', sans-serif;
       font-size: 13px;
       color: var(--text-muted);
       letter-spacing: 1.5px;
     }
     @media (max-width: 768px) {
-  .producten-grid {
-    flex-direction: column;
-  }
-
-  .why-sectie,
-  .pakketten-sectie,
-  .services-sectie {
-    padding: 20px 20px;
-  }
-
-  .usp-groot-item {
-    width: 100%;
-  }
-
-  .service-card {
-    padding: 30px 24px;
-  }
-
-  nav {
-    padding: 0 20px;
-  }
-
-  nav a {
-    margin-left: 20px;
-    font-size: 12px;
-  }
-
-  .visie-blok,
-  .doelgroep-blok {
-    padding: 30px 24px;
-  }
-
-  .visie-sectie {
-    padding: 60px 20px;
-  }
-
-  .contact-knoppen {
-    padding: 0 20px;
-  }
-
-  .contact-knop {
-    padding: 16px 30px;
-    width: 100%;
-    text-align: center;
-  }
-}@media (max-width: 768px) {
-  .logo-balk img {
-    height: 90px;
-  }
-}
+      nav { padding: 0 20px; }
+      nav a { margin-left: 20px; font-size: 12px; }
+      .logo-balk img { height: 90px; }
+      .contact-knoppen { padding: 0 20px; }
+      .contact-knop { padding: 16px 30px; width: 100%; text-align: center; }
+    }
   </style>
 </head>
 <body>
@@ -189,10 +134,11 @@
   </header>
 
   <section class="contact-sectie">
-    <h2 class="contact-titel">Get In Touch</h2>
+    <h2 class="contact-titel">Get Started</h2>
     <div class="contact-knoppen">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfX57aqQdY21zUwip8hHJ8ArQIH4Yy25X4kk2NklvO6d9Vapg/viewform" target="_blank" class="contact-knop">Online Session</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXWRUxQUa_yKfksohNjLgImCrgc1Ccb0TWYLs4ZCiDDdL0LA/viewform" target="_blank" class="contact-knop">Intake Call</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdi5MVtbezCQqXqUniRk29dVWORbH2wIA48rsVlroSBx6RJMA/viewform" target="_blank" class="contact-knop">Contact Form</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfX57aqQdY21zUwip8hHJ8ArQIH4Yy25X4kk2NklvO6d9Vapg/viewform?usp=header" target="_blank" class="contact-knop">Request Appointment</a>
     </div>
   </section>
 
