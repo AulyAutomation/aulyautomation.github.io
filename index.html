@@ -28,7 +28,7 @@
       overflow-x: hidden;
     }
 
-    header {
+ header {
   width: 100%;
   background-color: var(--bg);
   display: flex;
@@ -37,6 +37,12 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(35, 35, 35, 0.85);
+  backdrop-filter: blur(8px);
 }
 
     .logo-balk { width: 100%; background-color: var(--bg); padding: 0; margin: 0; line-height: 0; }
@@ -358,6 +364,17 @@
       <a href="inaction.html">In Action</a>
     </nav>
   </header>
+
+  <script>
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
 
   <section class="hero">
     <p>We connect existing tools to each other so that your company automatically follows up with customers and schedules appointments.</p>
